@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <title>Surprise For You!</title>
+    <style>
+        body { text-align: center; background-color: #ffeef2; font-family: 'Arial', sans-serif; }
+        .container { margin-top: 100px; }
+        .hidden { display: none; }
+        button { padding: 10px 20px; font-size: 18px; border-radius: 10px; border: none; cursor: pointer; }
+        .yes { background-color: #ff4d6d; color: white; }
+        .no { background-color: #ccc; }
+        img { width: 200px; border-radius: 15px; }
+    </style>
+</head>
+<body>
+
+    <div id="step1" class="container">
+        <h1>Hi My Love! ❤️</h1>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1eGdzZmxueXF4eHR3eXpxZnh4eHh4eHh4eHh4eHh4eHh4JnBvcz10JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/KztT2c4u8mYYUiCiZL/giphy.gif" alt="Cute Cat">
+        <p>I have a surprise for you. Are you ready?</p>
+        <button class="yes" onclick="showStep(2)">YES</button>
+        <button class="no" onclick="alert('Oh no! Try again!')">NO</button>
+    </div>
+
+    <div id="step2" class="container hidden">
+        <h1>Happy New Year! 🎉</h1>
+        <p>You are the best thing that happened to me.</p>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHp1eGdzZmxueXF4eHR3eXpxZnh4eHh4eHh4eHh4eHh4eHh4JnBvcz10JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/3o7TKMGpxxZ2ZfXGv6/giphy.gif">
+    </div>
+
+    <script>
+        function showStep(step) {
+            document.getElementById('step1').classList.add('hidden');
+            document.getElementById('step'+step).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
